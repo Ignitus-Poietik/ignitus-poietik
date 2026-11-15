@@ -18,7 +18,7 @@ const members = [
   {
     name: "Louis Simpson",
     role: "Business Development & Client Relations",
-    photo: "/team/simpson.jpg",
+    photo: "/team/simpson.webp",
     bio: "Builds lasting client partnerships, shapes project scopes and ensures every engagement delivers real business value.",
     skills: ["Business Strategy", "Client Relations", "Growth"],
     links: { linkedin: "", x: "", instagram: "", github: "" },

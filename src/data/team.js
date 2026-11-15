@@ -29,7 +29,7 @@ const members = [
     photo: "/team/julius.jpeg",
     bio: "Develops responsive web applications and scalable backend APIs using MongoDB, Express, React and Node.js.",
     skills: ["MongoDB & Node.js", "React", "REST APIs"],
-    links: { linkedin: "", x: "", instagram: "", github: "https://github.com/OforiMcke" },
+    links: { linkedin: "https://www.linkedin.com/in/ofori-mckeown-julius-67b353323?utm_source=share_via&utm_content=profile&utm_medium=member_android", x: "", instagram: "", github: "https://github.com/OforiMcke" },
   },
   {
     name: "Esther",

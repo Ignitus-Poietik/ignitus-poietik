@@ -106,32 +106,39 @@
   }
   .hero-art {
     width: 100%;
-    max-width: 430px;
-    height: 345px;
+    max-width: 460px;
+    height: 400px;
     align-self: center;
     margin: 10px 0 0;
     transform: none;
   }
   .orbit-a {
-    width: 300px;
-    height: 145px;
+    width: 340px;
+    height: 165px;
   }
   .orbit-b {
-    width: 255px;
-    height: 255px;
+    width: 295px;
+    height: 295px;
   }
   .orbit-c {
-    width: 330px;
-    height: 235px;
+    width: 365px;
+    height: 255px;
   }
   .code-window {
-    width: min(275px, 78vw);
+    width: min(335px, 88vw);
+  }
+  .code-content {
+    padding: 18px 16px 22px;
+    font-size: 11px;
+  }
+  .code-content p {
+    margin-bottom: 11px;
   }
   .floating-note {
     right: 0;
-    bottom: 30px;
-    min-width: 200px;
-    padding: 9px;
+    bottom: 54px;
+    min-width: 185px;
+    padding: 9px 11px;
   }
   .art-caption {
     top: 4px;

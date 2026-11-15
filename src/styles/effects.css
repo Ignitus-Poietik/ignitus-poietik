@@ -86,9 +86,9 @@
 
 .code-cursor {
   display: inline-block;
-  width: 6px;
-  height: 11px;
-  margin-left: 3px;
+  width: 7px;
+  height: 15px;
+  margin-left: 4px;
   vertical-align: -2px;
   background: #ff9871;
   animation: cursor-blink 1s step-end infinite;
@@ -97,9 +97,10 @@
   50% { opacity: 0; }
 }
 
-/* Floating UI elements around code editor */
+/* Floating UI elements around code editor (CSS glow/pulse + Framer Motion visibility) */
 .floating-badge {
   position: absolute;
+  z-index: 2;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -111,6 +112,8 @@
   font: 600 10px var(--mono);
   box-shadow: 0 14px 32px #c2541c1f;
   backdrop-filter: blur(8px);
+  will-change: transform, opacity;
+  animation: badge-glow-pulse 3.6s ease-in-out infinite;
 }
 .floating-badge svg {
   color: var(--accent);
@@ -121,27 +124,45 @@
   border-radius: 50%;
   background: #ff7043;
   box-shadow: 0 0 8px #ff7043a0;
+  animation: dot-pulse 2s ease-in-out infinite;
 }
 .badge-top {
-  top: 26px;
-  left: 8px;
-  animation: badge-float 5.5s ease-in-out infinite;
+  top: 28px;
+  left: 0;
+}
+.badge-top-right {
+  top: 42px;
+  right: 0;
+  animation-delay: 0.9s;
 }
 .badge-bottom {
-  left: 4px;
+  left: 0;
   bottom: 34px;
-  animation: badge-float 6.2s ease-in-out 0.8s infinite;
+  animation-delay: 1.5s;
 }
 .floating-note {
-  animation: badge-float-right 5.8s ease-in-out 0.4s infinite;
+  will-change: transform, opacity;
+  animation: badge-glow-pulse 4s ease-in-out 0.6s infinite;
 }
-@keyframes badge-float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-7px); }
+@keyframes badge-glow-pulse {
+  0%, 100% {
+    border-color: #f3dfd2;
+    box-shadow: 0 14px 32px #c2541c1f;
+  }
+  50% {
+    border-color: #f5b38a;
+    box-shadow: 0 18px 38px #ff704338;
+  }
 }
-@keyframes badge-float-right {
-  0%, 100% { transform: rotate(3deg) translateY(0); }
-  50% { transform: rotate(2deg) translateY(-7px); }
+@keyframes dot-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 8px #ff7043a0;
+  }
+  50% {
+    transform: scale(1.35);
+    box-shadow: 0 0 14px #ff7043e0;
+  }
 }
 
 /* Scroll reveal */
@@ -232,17 +253,18 @@
 }
 
 @media (max-width: 1000px) {
-  .badge-bottom { top: 22px; right: 4px; left: auto; bottom: auto; }
+  .badge-top { top: 18px; left: 4px; }
+  .badge-top-right { top: 24px; right: 4px; }
+  .badge-bottom { left: 4px; bottom: 20px; }
 }
 @media (max-width: 720px) {
-  .badge-top { top: 8px; left: 4px; padding: 7px 10px; font-size: 9px; }
-  .badge-bottom { top: 8px; right: 4px; left: auto; bottom: auto; padding: 7px 10px; font-size: 9px; }
+  .badge-top { top: 8px; left: 2px; padding: 7px 10px; font-size: 9px; }
+  .badge-top-right { top: 10px; right: 2px; padding: 7px 10px; font-size: 9px; }
+  .badge-bottom { left: 2px; bottom: 12px; padding: 7px 10px; font-size: 9px; }
   .back-to-top { right: 16px; bottom: 16px; }
   /* Reduce GPU load on mobile & slower devices */
   .hero-glow { filter: blur(14px); animation: none; }
   .orbit,
-  .floating-badge,
-  .floating-note,
   .code-window { animation: none; }
   .floating-badge { backdrop-filter: none; }
 }
@@ -261,6 +283,7 @@
   .code-window,
   .orbit,
   .floating-badge,
+  .badge-dot,
   .floating-note,
   .hero-glow,
   .code-cursor {

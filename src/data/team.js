@@ -18,7 +18,7 @@ const members = [
   {
     name: "Louis Simpson",
     role: "Business Development & Client Relations",
-    photo: "../../public/team/simpson.jpg",
+    photo: "/team/simpson.jpg",
     bio: "Builds lasting client partnerships, shapes project scopes and ensures every engagement delivers real business value.",
     skills: ["Business Strategy", "Client Relations", "Growth"],
     links: { linkedin: "", x: "", instagram: "", github: "" },
@@ -26,7 +26,7 @@ const members = [
   {
     name: "Mckeown Julius Ofori",
     role: "Software Developer (MERN Stack)",
-    photo: "../../public/team/julius.jpeg",
+    photo: "/team/julius.jpeg",
     bio: "Develops responsive web applications and scalable backend APIs using MongoDB, Express, React and Node.js.",
     skills: ["MongoDB & Node.js", "React", "REST APIs"],
     links: { linkedin: "", x: "", instagram: "", github: "https://github.com/OforiMcke" },

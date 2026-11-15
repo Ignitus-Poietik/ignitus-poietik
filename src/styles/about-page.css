@@ -50,7 +50,7 @@
   border-radius: 12px;
   background: #ffffffeb;
 }
-.mosaic-tile:last-child {
+.mosaic-tile:last-child:nth-child(odd) {
   grid-column: span 2;
 }
 .mosaic-avatar {

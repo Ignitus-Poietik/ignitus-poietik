@@ -20,7 +20,7 @@ function AboutHero() {
             </span>
           </h1>
           <p className="hero-lead hero-enter" style={{ "--delay": "280ms" }}>
-            We're a five-person team of designers, developers and educators
+            We're a dedicated team of developers, strategists and communicators
             who turn bold ideas into useful digital products—while helping
             others learn to do the same.
           </p>
@@ -32,7 +32,7 @@ function AboutHero() {
               Mission &amp; values <ArrowDownRight size={15} />
             </a>
             <a className="text-link" href="#team">
-              Meet the 5 builders <ArrowDownRight size={15} />
+              Meet the {team.length} builders <ArrowDownRight size={15} />
             </a>
           </div>
         </div>
@@ -60,7 +60,7 @@ function AboutHero() {
           )}
           <div className="team-showcase-caption">
             <span>THE PEOPLE BEHIND IGNITUS POIETIK</span>
-            <b>05 BUILDERS</b>
+            <b>{String(team.length).padStart(2, "0")} BUILDERS</b>
           </div>
         </div>
       </div>

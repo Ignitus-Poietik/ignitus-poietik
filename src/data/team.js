@@ -1,50 +1,42 @@
 /*
- * TEAM MEMBERS: replace the 5 entries below with confirmed team info.
+ * TEAM MEMBERS: confirmed team entries below.
  * - teamPhoto: optional group photo in public/team/, e.g. "/team/group.jpg"
- * - photo: individual portrait in public/team/, e.g. "/team/louis.jpg"
+ * - photo: individual portrait in public/team/, e.g. "/team/nathaniel.jpg"
  *          (leave "" to show initials until real photos are added)
  */
 export const teamPhoto = "";
 
 const members = [
   {
-    name: "Team Member 1",
-    role: "Founder & Creative Director",
+    name: "Nathaniel",
+    role: "Founder & CEO / Full-Stack Developer",
     photo: "",
-    bio: "Guides product direction, creative strategy and client partnerships from concept to launch.",
-    skills: ["Product Strategy", "Creative Direction"],
+    bio: "Leads product vision, technical architecture and full-stack software development from concept to production.",
+    skills: ["Full-Stack Dev", "System Architecture", "Product Leadership"],
     links: { linkedin: "", x: "", instagram: "", github: "" },
   },
   {
-    name: "Team Member 2",
-    role: "Lead Software Engineer",
+    name: "Simpson",
+    role: "Business Development & Client Relations",
     photo: "",
-    bio: "Architects responsive web applications, software systems and reliable technical foundations.",
-    skills: ["Web Apps", "System Architecture"],
+    bio: "Builds lasting client partnerships, shapes project scopes and ensures every engagement delivers real business value.",
+    skills: ["Business Strategy", "Client Relations", "Growth"],
     links: { linkedin: "", x: "", instagram: "", github: "" },
   },
   {
-    name: "Team Member 3",
-    role: "UI/UX & Product Designer",
+    name: "Julius",
+    role: "Software Developer (MERN Stack)",
     photo: "",
-    bio: "Shapes clear user journeys, visual systems and intuitive interfaces built around real users.",
-    skills: ["UI/UX Design", "Design Systems"],
+    bio: "Develops responsive web applications and scalable backend APIs using MongoDB, Express, React and Node.js.",
+    skills: ["MongoDB & Node.js", "React", "REST APIs"],
     links: { linkedin: "", x: "", instagram: "", github: "" },
   },
   {
-    name: "Team Member 4",
-    role: "Frontend & Interactive Developer",
+    name: "Esther",
+    role: "Communications & Marketing",
     photo: "",
-    bio: "Crafts fast, accessible and engaging digital interfaces across desktop and mobile devices.",
-    skills: ["React", "Interactive UI"],
-    links: { linkedin: "", x: "", instagram: "", github: "" },
-  },
-  {
-    name: "Team Member 5",
-    role: "Poietik Academy & Operations Lead",
-    photo: "",
-    bio: "Supports project delivery while nurturing community learning initiatives at Poietik Academy.",
-    skills: ["Tech Education", "Operations"],
+    bio: "Shapes brand storytelling, digital campaigns and clear communication that connects Ignitus Poietik with people and businesses.",
+    skills: ["Brand Storytelling", "Digital Marketing", "Communications"],
     links: { linkedin: "", x: "", instagram: "", github: "" },
   },
 ];

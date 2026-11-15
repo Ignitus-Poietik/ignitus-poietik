@@ -27,7 +27,7 @@ function AboutPage() {
               </h2>
             </div>
             <p>
-              Get to know the five people who will listen to your idea, shape it
+              Get to know the people who will listen to your idea, shape it
               and build it with you. Click anyone to see their full profile.
             </p>
           </div>

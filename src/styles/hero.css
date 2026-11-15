@@ -126,7 +126,7 @@ h1 em {
   color: #b8a1ff;
 }
 .hero-art {
-  height: 465px;
+  height: 520px;
   position: relative;
   isolation: isolate;
 }
@@ -157,40 +157,40 @@ h1 em {
   transform: translate(-50%, -50%);
 }
 .orbit-a {
-  width: 410px;
-  height: 180px;
+  width: 490px;
+  height: 215px;
   transform: translate(-50%, -50%) rotate(-27deg);
 }
 .orbit-b {
-  width: 330px;
-  height: 330px;
+  width: 400px;
+  height: 400px;
   transform: translate(-50%, -50%) rotate(35deg);
   border-color: #ff987128;
 }
 .orbit-c {
-  width: 440px;
-  height: 270px;
+  width: 510px;
+  height: 315px;
   transform: translate(-50%, -50%) rotate(68deg);
   border-color: #a38cff27;
 }
 .code-window {
   position: absolute;
-  width: 290px;
+  width: min(410px, 88%);
   left: 50%;
   top: 48%;
   transform: translate(-50%, -50%) rotate(-3deg);
   overflow: hidden;
   border: 1px solid #ffffff20;
-  border-radius: 10px;
+  border-radius: 14px;
   background: linear-gradient(145deg, #201a2d, #111117);
-  box-shadow: 0 24px 75px #0007;
+  box-shadow: 0 30px 85px #0008;
 }
 .window-bar {
-  height: 38px;
+  height: 44px;
   display: flex;
   align-items: center;
-  gap: 5px;
-  padding: 0 13px;
+  gap: 7px;
+  padding: 0 16px;
   border-bottom: 1px solid #ffffff12;
 }
 .window-bar i,
@@ -208,25 +208,29 @@ h1 em {
 .mock-top i:nth-child(3) {
   background: #80c99d;
 }
+.window-bar i {
+  width: 8px;
+  height: 8px;
+}
 .window-bar span {
   margin-left: auto;
   color: #777083;
-  font: 9px var(--mono);
+  font: 11px var(--mono);
 }
 .code-content {
-  padding: 19px 15px 23px;
+  padding: 24px 22px 28px;
   color: #e5e0ed;
-  font: 10px var(--mono);
+  font: 13px/1.55 var(--mono);
 }
 .code-content p {
-  margin: 0 0 13px;
+  margin: 0 0 14px;
   white-space: nowrap;
 }
 .code-content p:last-child {
   margin-bottom: 0;
 }
 .code-content small {
-  margin-right: 11px;
+  margin-right: 14px;
   color: #716a80;
 }
 .code-content b {
@@ -244,7 +248,7 @@ h1 em {
 .floating-note {
   position: absolute;
   right: 0;
-  bottom: 62px;
+  bottom: 26px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -254,7 +258,7 @@ h1 em {
   border-radius: 9px;
   background: #1a1723f2;
   box-shadow: 0 18px 45px #0005;
-  transform: rotate(3deg);
+  z-index: 2;
 }
 .floating-note > span {
   width: 35px;

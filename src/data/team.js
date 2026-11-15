@@ -8,7 +8,7 @@ export const teamPhoto = "";
 
 const members = [
   {
-    name: "Nathaniel",
+    name: "Nathaniel Addae Marfo",
     role: "Founder & CEO / Full-Stack Developer",
     photo: "",
     bio: "Leads product vision, technical architecture and full-stack software development from concept to production.",
@@ -16,20 +16,20 @@ const members = [
     links: { linkedin: "", x: "", instagram: "", github: "" },
   },
   {
-    name: "Simpson",
+    name: "Louis Simpson",
     role: "Business Development & Client Relations",
-    photo: "",
+    photo: "../../public/team/simpson.jpg",
     bio: "Builds lasting client partnerships, shapes project scopes and ensures every engagement delivers real business value.",
     skills: ["Business Strategy", "Client Relations", "Growth"],
     links: { linkedin: "", x: "", instagram: "", github: "" },
   },
   {
-    name: "Julius",
+    name: "Mckeown Julius Ofori",
     role: "Software Developer (MERN Stack)",
-    photo: "",
+    photo: "../../public/team/julius.jpeg",
     bio: "Develops responsive web applications and scalable backend APIs using MongoDB, Express, React and Node.js.",
     skills: ["MongoDB & Node.js", "React", "REST APIs"],
-    links: { linkedin: "", x: "", instagram: "", github: "" },
+    links: { linkedin: "", x: "", instagram: "", github: "https://github.com/OforiMcke" },
   },
   {
     name: "Esther",

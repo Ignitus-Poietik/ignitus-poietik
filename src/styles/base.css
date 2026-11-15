@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-family: "Manrope", sans-serif;
+  color: #f5f3fa;
+  background: #0b0b10;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --bg: #0b0b10;
+  --panel: #121117;
+  --purple: #7546ff;
+  --orange: #ff7043;
+  --muted: #a5a1b2;
+  --line: rgba(245, 243, 250, 0.12);
+  --mono: "DM Mono", monospace;
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--bg);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 4px;
+}
+::selection {
+  background: var(--purple);
+  color: white;
+}
+.site-shell {
+  /* clip (not hidden) so the sticky header keeps working */
+  overflow-x: clip;
+}
+.wrap {
+  width: min(1160px, calc(100% - 48px));
+  margin: 0 auto;
+}
+.section {
+  padding: 112px 0;
+}

@@ -1,0 +1,175 @@
+/* Team: cards, avatars, home-page teaser and profile pages */
+
+.team-section {
+  background: var(--soft-gradient);
+  border-block: 1px solid #ffe0cc;
+}
+.team-grid {
+  display: grid;
+  /* fits 5 per row on desktop and wraps on smaller screens */
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
+}
+.team-section .kicker + .team-grid {
+  margin-top: 28px;
+}
+
+/* Avatar: photo or initials on the brand gradient */
+.avatar {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: var(--warm-gradient);
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Team card */
+.team-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #f3e2d6;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 10px 30px #c2541c12;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
+}
+.team-card:hover {
+  transform: translateY(-6px);
+  border-color: #ff9a6b;
+  box-shadow: 0 22px 45px #c2541c26;
+}
+.team-card-avatar {
+  aspect-ratio: 1 / 1;
+  font-size: 54px;
+}
+.team-card:hover .avatar img {
+  transform: scale(1.06);
+}
+.team-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 18px 18px 16px;
+}
+.team-card-body .kicker {
+  margin-bottom: 16px;
+  font-size: 9px;
+  line-height: 1.6;
+}
+.team-card-body h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  letter-spacing: -0.04em;
+}
+.team-card-link {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+}
+.team-card:hover .team-card-link svg {
+  transform: translate(2px, -2px);
+  transition: transform 0.2s;
+}
+
+/* Home-page teaser: overlapping avatars + "Meet the team" */
+.team-teaser {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 12px;
+}
+.avatar-stack {
+  display: flex;
+}
+.avatar-stack .avatar {
+  width: 34px;
+  height: 34px;
+  margin-left: -9px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  font-size: 11px;
+}
+.avatar-stack .avatar:first-child {
+  margin-left: 0;
+}
+
+/* Profile page */
+.member {
+  padding-top: 60px;
+}
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+.back-link:hover {
+  color: var(--accent);
+}
+.member-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: start;
+  gap: 70px;
+  margin-top: 34px;
+}
+.member-card {
+  display: grid;
+  gap: 18px;
+  justify-items: start;
+}
+.member-avatar {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 18px;
+  font-size: 110px;
+  box-shadow: 0 30px 60px #c2541c2e;
+}
+.member-copy h1 {
+  margin: 14px 0 22px;
+  font-size: clamp(42px, 5vw, 64px);
+}
+.member-copy > p {
+  max-width: 560px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+.member-copy .tags {
+  margin: 26px 0 30px;
+}
+.member-copy .tags span {
+  padding: 7px 10px;
+  font-size: 10px;
+}
+
+@media (max-width: 1000px) {
+  .member-grid {
+    gap: 40px;
+  }
+}
+@media (max-width: 720px) {
+  .member-grid {
+    grid-template-columns: 1fr;
+  }
+  .member-avatar {
+    max-width: 320px;
+  }
+}

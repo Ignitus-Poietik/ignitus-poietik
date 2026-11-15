@@ -1,0 +1,259 @@
+/* About Us page: intro + team showcase, story timeline, MVV cards & enhanced team cards */
+
+.about-hero {
+  padding: 72px 0 84px;
+}
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 54px;
+}
+.about-hero-copy h1 {
+  margin: 22px 0 20px;
+}
+.about-hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 28px;
+}
+
+/* Team showcase frame beside About intro */
+.team-showcase-frame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #f3dfd2;
+  border-radius: 18px;
+  background: linear-gradient(155deg, #fffaf6, #ffe8d7);
+  box-shadow: 0 24px 60px #c2541c1f;
+  padding: 18px;
+}
+.team-group-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.team-mosaic {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.mosaic-tile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid #f3e2d6;
+  border-radius: 12px;
+  background: #ffffffeb;
+}
+.mosaic-tile:last-child {
+  grid-column: span 2;
+}
+.mosaic-avatar {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  font-size: 13px;
+}
+.mosaic-tile b {
+  display: block;
+  font-size: 12px;
+  color: var(--ink);
+}
+.mosaic-tile small {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 10px;
+}
+.team-showcase-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #f0d7c7;
+  font: 600 9px var(--mono);
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+.team-showcase-caption b {
+  color: var(--accent);
+}
+
+/* Progressive vertical story timeline */
+.story-timeline {
+  position: relative;
+  display: grid;
+  gap: 24px;
+  margin-top: 42px;
+  padding-left: 38px;
+}
+.story-track {
+  position: absolute;
+  left: 9px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  border-radius: 2px;
+  background: #f2dfd3;
+  overflow: hidden;
+}
+.story-track-fill {
+  display: block;
+  width: 100%;
+  height: var(--timeline-progress, 0%);
+  background: var(--warm-gradient);
+  transition: height 0.12s linear;
+}
+.story-item {
+  position: relative;
+}
+.story-node {
+  position: absolute;
+  left: -34px;
+  top: 24px;
+  width: 12px;
+  height: 12px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: var(--orange);
+  box-shadow: 0 0 0 3px #ffd9c5;
+}
+.story-card {
+  padding: 24px 26px;
+  border: 1px solid #f3e2d6;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 10px 30px #c2541c10;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.story-card:hover {
+  transform: translateY(-3px);
+  border-color: #ff9a6b;
+}
+.story-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  font: 600 10px var(--mono);
+  letter-spacing: 0.1em;
+}
+.story-meta span {
+  color: var(--accent);
+}
+.story-meta small {
+  color: var(--muted);
+}
+.story-card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  letter-spacing: -0.03em;
+}
+.story-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.85;
+}
+
+/* Mission, Vision & Core Values */
+.mvv-section {
+  background: var(--soft-gradient);
+  border-block: 1px solid #ffe0cc;
+}
+.mvv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.mvv-card {
+  display: flex;
+  flex-direction: column;
+  padding: 26px 22px;
+  border: 1px solid #f3e2d6;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 10px 30px #c2541c12;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.mvv-card:hover {
+  transform: translateY(-5px);
+  border-color: #ff9a6b;
+  box-shadow: 0 20px 42px #c2541c22;
+}
+.mvv-card h3 {
+  margin: 22px 0 10px;
+  font-size: 18px;
+  letter-spacing: -0.03em;
+}
+.mvv-card > p {
+  flex: 1;
+  margin-bottom: 20px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* Enhanced team card bio & skills */
+.team-section#team {
+  background: transparent;
+  border-block: 0;
+}
+.team-card-body .kicker {
+  margin-bottom: 10px;
+}
+.team-card-bio {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+.team-card-tags {
+  margin-bottom: 14px;
+}
+
+/* CTA supporting copy */
+.cta-band-copy p {
+  max-width: 480px;
+  margin: 12px 0 0;
+  color: #fff3ea;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+@media (max-width: 1000px) {
+  .about-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .mvv-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 720px) {
+  .about-hero {
+    padding: 52px 0 56px;
+  }
+  .team-mosaic {
+    grid-template-columns: 1fr;
+  }
+  .mosaic-tile:last-child {
+    grid-column: span 1;
+  }
+  .story-timeline {
+    padding-left: 28px;
+  }
+  .story-node {
+    left: -24px;
+  }
+  .story-card {
+    padding: 18px;
+  }
+}

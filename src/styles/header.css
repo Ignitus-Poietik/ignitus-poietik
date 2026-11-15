@@ -1,0 +1,100 @@
+.announcement {
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  background: #17131e;
+  color: #c5bdce;
+  font-size: 10px;
+}
+.announcement a {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  color: #fff;
+  font-weight: 700;
+}
+.status-dot,
+.eyebrow span,
+.academy-overline i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--orange);
+  box-shadow: 0 0 12px #ff704380;
+}
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #0b0b10d9;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.header {
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  z-index: 10;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1.25;
+}
+.brand b {
+  color: #b8a1ff;
+}
+.brand small {
+  display: block;
+  margin-top: 4px;
+  color: #888393;
+  font: 8px var(--mono);
+  letter-spacing: 0.12em;
+}
+.brand-logo {
+  width: 44px;
+  height: 44px;
+  display: block;
+  flex-shrink: 0;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.nav > a:not(.nav-cta) {
+  color: #b6b1c0;
+  font-size: 12px;
+  transition: color 0.2s;
+}
+.nav > a:hover {
+  color: #fff;
+}
+.nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 15px;
+  border-radius: 5px;
+  background: #f5f3fa;
+  color: #15121b;
+  font-size: 11px;
+  font-weight: 800;
+}
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: #fff;
+}
